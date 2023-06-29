@@ -1,0 +1,380 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,500,700&display=swap");
+
+
+*,
+::after,
+::before{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --primary-clr: black;
+    --clr-black-1: #0E0E12;
+    --secondary-clr: white;
+    --clr-grey-1: #F5F5F7;
+    --clr-grey-2: #5D5D5D;
+    --clr-grey-3: #FAFAFA;
+    --clr-red-1: rgb(200, 37, 37);
+    --clr-link: #06c;
+    --ff-primary: "Roboto", sans-serif;
+    --ff-secondary: "Open Sans", sans-serif;
+}
+html{
+    overflow-y: scroll;
+}
+body{
+    font-size: 1rem;
+    font-family: var(--ff-primary);
+}
+a{
+    color: var(--clr-grey-2);
+    text-decoration: none;
+}
+.a0{
+    color: var(--primary-clr);
+    font-size: 18px;
+}
+.a1{
+    color: var(--clr-link);
+}
+header{
+    width: 100%;
+    padding: 0px 22px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: var(--secondary-clr);
+}
+.nav-center{
+    margin: 0 auto;
+    width: fit-content;
+    height: 45px;
+    background: var(--secondary-clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 1px;
+    margin: 0px 10px 0px 0px;
+}
+.icon-cont{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+ul{ 
+    width: fit-content;
+    list-style-type: none;
+    font-size: 0.78rem;
+    font-weight: bold;
+}
+li{
+    display: inline-block;
+    margin: 0px 15px;
+}
+main{
+    width: 100%;
+    min-height: 580px;
+    background: var(--clr-grey-1);
+    margin-top: 45px;
+}
+h1{
+    text-align: center;
+    font-size: 3.4rem;
+    padding-top: 50px;
+    font-weight: 500;
+}
+h3{
+    text-align: center;
+    font-size: 1.68rem;
+    font-weight: 400;
+    color: var(--clr-black-1);
+}
+h4{
+    display: inline-block;
+    font-weight: 400;
+    font-size: 1.25rem;
+    margin: 0 14px;
+}
+.link-center{
+    width: fit-content;
+    margin: 15px auto 0px auto;
+}
+.fa-magnifying-glass{
+    font-size: 14px;
+    margin: 0px 30px 0px 15px;
+}
+.bag{
+    font-size: 12px;
+}
+.fa-angle-right{
+    font-size: 15px;
+    margin-left: 5px;
+}
+.sec1,.sec2{
+    width: 100%;
+    height: 600px;
+    margin-top: 12px;
+    background: var(--clr-grey-1);
+}
+.sec2{
+    background: black url('images/iphones.png') no-repeat;
+    background-size: 950px;
+    background-position: center bottom;
+}
+.img-wrapper1{
+    width: fit-content;
+    margin: 125px auto 0px auto;
+}
+.img-mac{
+    width: 980px;
+}
+.img-wrapper2{
+    width: fit-content;
+    margin: 45px auto 0px auto;
+}
+.img-bts{
+    width: 320px;
+}
+.white{
+    color: var(--secondary-clr);
+}
+.img-wrapper3{
+    margin: 65.5px auto 0px auto;
+    width: fit-content;
+}
+.sec3,.sec4,.sec5{
+    background: white;
+    width: 100%;
+    height: 580px;
+    margin-top: 12px;
+    padding: 0px 5px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+}
+.div-wrap{
+    background: var(--clr-grey-1);
+    margin: 0px 5.5px;
+}
+.head-cent{
+    width: fit-content;
+    margin: 50px auto 0px auto;
+}
+h2{
+    text-align: center;
+    font-size: 2.42rem;
+    font-weight: 500;
+}
+.ff-small{
+    font-size: 1.85rem;
+    letter-spacing: 1px;
+    margin-top: 60px;
+}
+h5{
+    font-size: 1.35rem;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 4px;
+}
+.grid-wrap{
+    margin: 10px auto 0px auto;
+    text-align: center;
+}
+.link-s{
+    font-size: 1.1rem;
+}
+.wrap-iphone{
+    background: var(--clr-grey-3) url('images/phones.png') no-repeat;
+    background-position: center 225px;
+    background-size: 590px;
+}
+.wrap-vision{
+    background: url('images/vision.png') no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 390px;
+}
+.wrap-watch{
+    background: black url('images/watch.png') no-repeat;
+    background-position: center bottom;
+    background-size: 450px;
+}
+.red{
+    color: var(--clr-red-1);
+    text-align: center;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    margin-top: 2.5px;
+}
+.wrap-laptop{
+    background: black url('images/laptop.png') no-repeat;
+    background-position: center bottom;
+    background-size: 590px;
+}
+.wrap-phone{
+    background: var(--clr-grey-3) url('images/hand.png') no-repeat;
+    background-position: center bottom;
+    background-size: 600px;
+}
+.wrap-tab{
+    background: var(--clr-grey-3) url('images/tab.png') no-repeat;
+    background-position: center bottom;
+    background-size: 590px;
+}
+.apple{
+    font-size: 32px;
+    margin-right: 2px;
+    position: relative;
+    bottom: 2px;
+}
+footer{
+    width: 100%;
+    min-height: 800px;
+    background: var(--clr-grey-1);
+    margin-top: 20px;
+}
+.footer-center{
+    margin: 0px auto;
+    width: 1000px;
+}
+.text-cont{
+    border-bottom: 0.1px solid var(--clr-grey-2);
+    padding-bottom: 20px;
+}
+footer p{
+    font-size: 0.8rem;
+    color: var(--clr-grey-2);
+    margin-top: 10px;
+}
+.footer-link{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-link div{
+    width: 150px;
+    height: 400px;
+}
+footer h6{
+    font-size: 0.8rem;
+    margin-top: 21px;
+    margin-bottom: 6px;
+}
+footer li{
+    margin: 0px;
+    display: block;
+    line-height: 26px;
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+footer li:hover{
+    text-decoration: underline;
+}
+.contact-cont{
+    margin-top: 20px;
+}
+.hide-lines{
+    display:none;
+}
+.xmark{
+    display: none;
+}
+@media screen and (max-width: 1030px){
+    .sec2{
+        background: black url('images/line-iphones.png') no-repeat;
+        background-size: 270px;
+        background-position: center bottom;
+    }
+    .img-mac{
+        width: 690px;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    h3{
+        font-size: 1.45rem;
+    }
+    h4{
+        font-size: 1.125rem;
+    }
+    li{
+        margin: 0 10px;
+    }
+
+}
+@media screen and (max-width: 910px){
+    header{
+        padding: 0px 16px;
+    }
+    body{
+        position: relative;
+    }
+    .pos-rel{
+        position: relative;
+    }
+    ul{
+        position: absolute;
+        top: 40px;
+        left: 0px;
+        width: 100%;
+        height: 0px;
+        background: white; 
+        padding-top: 8px;
+        transition: all 0.5s ease-in-out;
+        overflow-y: hidden;
+    }
+    .height{
+        height: 610px;
+    }
+    li{
+        display: block;
+        font-size: 1.725rem;
+        font-weight: 500;
+        line-height: 42px;
+        padding-left: 40px;
+        padding-top: 5px;
+    }
+    ul a{
+        color: black;
+    }
+    .nav-center{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .flex-end{
+        justify-content: flex-end;
+    }
+    .hide-lines{
+        display: inline-block;
+        margin: 3px 0px 0px 25px;
+        font-size: 48dp;
+        color: var(--clr-grey-2);
+        transition: all 0.3s ease-in-out;
+    }
+    .xmark{
+        display: none;
+        text-align: end;
+        font-size: 25px;
+        margin: 3px 4px 0px 25px;
+        transition: all 0s ease-in-out;
+    }
+    .a0{
+        font-size: 21.5px;
+    }
+    .hide{
+        display: none;
+    }
+    .show{
+        display: inline-block;
+    }
+}
+
+
