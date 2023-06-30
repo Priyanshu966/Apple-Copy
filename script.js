@@ -11,6 +11,7 @@ let main = document.querySelector('main');
 let header = document.querySelector('header');
 let footer = document.querySelector('footer');
 let dropBar = document.querySelector('.drop-bar');
+let rightCont = document.querySelectorAll('nav li');
 
 
 btnToggle.forEach(function(e){
@@ -29,5 +30,16 @@ btnToggle.forEach(function(e){
         xMark.classList.toggle('show');
         dropBar.classList.toggle('show');
         dropBar.classList.toggle('height');
+    })
+})
+
+rightCont.forEach(function(e){
+    e.addEventListener('mouseover' , function(){
+        e.lastElementChild.classList.add('show-right');
+    })
+})
+rightCont.forEach(function(e){
+    e.addEventListener('mouseout' , function(){
+        e.lastElementChild.classList.remove('show-right');
     })
 })
