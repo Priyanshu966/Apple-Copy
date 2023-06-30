@@ -83,7 +83,9 @@ li{
 main{
     width: 100%;
     min-height: 580px;
-    background: var(--clr-grey-1);
+    background: var(--clr-grey-1) url('images/macbook5.png') no-repeat;
+    background-size: 985px;
+    background-position: center bottom;
     margin-top: 45px;
 }
 h1{
@@ -238,26 +240,29 @@ h5{
 }
 footer{
     width: 100%;
-    min-height: 800px;
+    height: fit-content;
     background: var(--clr-grey-1);
     margin-top: 20px;
+    padding: 8px 20px 0px 20px;
+    display: flex;
+    justify-content: center;
 }
 .footer-center{
-    margin: 0px auto;
-    width: 1000px;
+    width: 976px;
 }
 .text-cont{
     border-bottom: 0.1px solid var(--clr-grey-2);
     padding-bottom: 20px;
 }
-footer p{
-    font-size: 0.8rem;
+.text-cont p{
+    font-size: 0.77rem;
     color: var(--clr-grey-2);
-    margin-top: 10px;
+    margin-top: 11.5px;
 }
 .footer-link{
     display: flex;
     justify-content: space-between;
+    height: fit-content;
 }
 .footer-link div{
     width: 150px;
@@ -279,7 +284,52 @@ footer li:hover{
     text-decoration: underline;
 }
 .contact-cont{
-    margin-top: 20px;
+    margin-top: 100px;
+    border-bottom: 1px solid var(--clr-grey-2);
+    font-size: 0.8rem;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    color: var(--clr-grey-2);
+}
+.contact-cont a{
+    text-decoration: underline;
+    color: var(--clr-link);
+    height: 50px;
+}
+.right-cont{
+    font-size: 0.8rem;
+    color: var(--clr-grey-2);
+    margin: 10px 0px 30px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.right-cont a:hover{
+    text-decoration: underline;
+}
+.terms-cont{
+    width: fit-content;
+}
+.terms-cont p{
+    display: inline-block;
+    margin-right: 26px;
+}
+.terms-cont span{
+    margin-right: 8px;
+    padding-right: 10px;
+    border-right: 1px solid var(--clr-grey-2);
+}
+.terms-cont .site{
+    border-right: 0px;
+}
+li .right{
+    display: none;
+}
+.sub-link{
+    display: none;
+}
+h6 .fa-plus{
+    display: none;
 }
 .hide-lines{
     display:none;
@@ -293,8 +343,9 @@ footer li:hover{
         background-size: 270px;
         background-position: center bottom;
     }
-    .img-mac{
-        width: 690px;
+    main{
+        background-size: 694px;
+        background-position: center 326px;
     }
     h1{
         font-size: 3rem;
@@ -305,7 +356,7 @@ footer li:hover{
     h4{
         font-size: 1.125rem;
     }
-    li{
+    nav li{
         margin: 0 10px;
     }
 
@@ -320,7 +371,7 @@ footer li:hover{
     .pos-rel{
         position: relative;
     }
-    ul{
+    nav ul{
         position: absolute;
         top: 40px;
         left: 0px;
@@ -334,15 +385,17 @@ footer li:hover{
     .height{
         height: 610px;
     }
-    li{
-        display: block;
+    nav li{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         font-size: 1.725rem;
         font-weight: 500;
         line-height: 42px;
         padding-left: 40px;
         padding-top: 5px;
     }
-    ul a{
+    nav ul a{
         color: black;
     }
     .nav-center{
@@ -375,6 +428,80 @@ footer li:hover{
     .show{
         display: inline-block;
     }
+    li .show-right{
+        display: inline-block;
+        font-size: 20px;
+        color: var(--clr-grey-2);
+        margin-right: 8.5px;
+    }
+}
+@media screen and (max-width: 885px){
+    .terms-cont p{
+        display: block;
+        line-height: 26px;
+    }
+}
+@media screen and (max-width: 842px){
+    footer{
+        padding:0px 16px;
+    }
+    .footer-link{
+        margin-top: 28px;
+        flex-flow: column;
+        justify-content: flex-start;
+    }
+    .footer-link div{
+        width: 100%;
+        height: fit-content;
+    }
+    .footer-link ul{
+        display: none;
+    }
+    .footer-link h6{
+        border-bottom: 1px solid var(--clr-grey-2);
+        color: var(--clr-grey-2);
+        margin: 0px 0px 11px 0px;
+        height: 27px;
+        font-weight: 400;
+        display: flex;
+        justify-content: space-between;
+    }
+    .sub-link{
+        display: block;
+    }
+    h6 .fa-plus{
+        display: inline-block;
+        color: black;
+        margin-right: 10px;
+        font-size: 10px;
+        position: relative;
+        top: 3px;
+    }
+    .contact-cont{
+        margin-top: 0px;
+        border-bottom: 0px;
+    }
+    .right-cont{
+        flex-flow: column-reverse;
+        justify-content: none;
+        margin-bottom: 25px;
+    }
+    .terms-cont{
+        width: 100%;
+        margin-top: 18px;
+        line-height: 18px;
+    }
+    .terms-cont p{
+        display: block;
+    }
+}
+@media screen and (max-width: 730px){
+    main{
+        background: var(--clr-grey-1) url('images/macbook5-rotate.png') no-repeat;
+        background-size: 300px;
+        background-position: center bottom;
+    }
+
 }
 
 
