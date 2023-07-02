@@ -56,39 +56,89 @@ linkToggle.forEach(function(e){
     })
 })
 
-//For toggling slider buttons and slider 
+/*For toggling slider buttons and slider*/
 
+let slideCont = document.querySelector('.sec6');
 let slides = document.querySelectorAll('.img-cont');
+let fakeSlide = document.querySelector('.fakeimg-cont');
 let btns = document.querySelectorAll('.btn');
 let playBtn = document.querySelector('.play-btn');
 let play = document.querySelector('.play-btn .fa-play');
 let pause = document.querySelector('.play-btn .fa-pause');
 
 let count = 0;
+let stop = true;
+
 
 slides.forEach(function(slide , index){
     slide.style.left = `${100 * index}%`;
 
 })
-let start;
-function startInterval(){
-        start = setInterval(function(){
-        count++
+
+for(y of slides){
+    y.style.opacity = 0.25;
+}
+slides[count].style.opacity = 1;
+
+btns.forEach(function(btn , index){
+    btn.addEventListener('click' , function(){
+        count = index;
+        for(x of btns){
+            x.classList.remove('black-bag');
+        }
+        btn.classList.add('black-bag');
+
+        for(y of slides){
+            y.style.opacity = 0.25;
+        }
+        slides[count].style.opacity = 1;
+
+        fakeSlide.style.transform  = `translateX(${-100 * (count)}%)`;
         slides.forEach(function(slide){
             slide.style.transform =  `translateX(${-100 * count}%)`
         })
-        if(count == slides.length){
+
+        pause.classList.add('hide');
+        play.classList.add('show');
+        clearInterval(start);
+        stop = false;
+    })
+
+})
+
+let start;
+let cloneSlides;
+
+slides.forEach(function(e){
+    cloneSlides = e.cloneNode(true);
+})
+
+function startInterval(){
+        start = setInterval(function(){
+           
+        count++
+        if(count == slides.length - 1){
             count = 0;
         }
         for(x of btns){
             x.classList.remove('black-bag');
         }
         btns[count].classList.add('black-bag');
+
+        for(y of slides){
+            y.style.opacity = 0.25;
+        }
+        slides[count].style.opacity = 1;
+        slides.forEach(function(slide){
+            fakeSlide.style.transform  = `translateX(${-100 * (count)}%)`;
+            slide.style.transform =  `translateX(${-100 * count}%)`;
+        })
+       
+        
     }, 5000);
 }
 
 startInterval();
-let stop = true;
 playBtn.addEventListener('click' , function(){
     pause.classList.toggle('hide');
     play.classList.toggle('show');
