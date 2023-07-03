@@ -56,7 +56,7 @@ linkToggle.forEach(function(e){
     })
 })
 
-/*For toggling slider buttons and slider*/
+//Variables for toggling slider buttons and slider
 
 let slideCont = document.querySelector('.sec6');
 let slides = document.querySelectorAll('.img-cont');
@@ -65,41 +65,62 @@ let btns = document.querySelectorAll('.btn');
 let playBtn = document.querySelector('.play-btn');
 let play = document.querySelector('.play-btn .fa-play');
 let pause = document.querySelector('.play-btn .fa-pause');
+let btnRelCont = document.querySelectorAll('.btnrel-cont');
 
 let count = 0;
 let stop = true;
 
-
+//For assigning position according to slide index
 slides.forEach(function(slide , index){
     slide.style.left = `${100 * index}%`;
 
 })
 
+//For adding opacity when slide showup
 for(y of slides){
     y.style.opacity = 0.25;
 }
 slides[count].style.opacity = 1;
 
+//For showing StreamNow button on slider when slide changes
+for(z of btnRelCont){
+    z.classList.remove('show-btnrel-cont');
+}
+btnRelCont[count].classList.add('show-btnrel-cont');
+
+//Clickable buttons for changing slides and other actions
 btns.forEach(function(btn , index){
     btn.addEventListener('click' , function(){
         count = index;
+
+        //For adding and removing black background when btn is clicked
         for(x of btns){
             x.classList.remove('black-bag');
         }
         btn.classList.add('black-bag');
 
+        //For adding opacity when btn is clicked
         for(y of slides){
             y.style.opacity = 0.25;
         }
         slides[count].style.opacity = 1;
 
+        //For showing StreamNow button on slider when btn is clicked
+        for(z of btnRelCont){
+            z.classList.remove('show-btnrel-cont');
+        }
+        btnRelCont[count].classList.add('show-btnrel-cont');
+        
+        //For changing slides when btn is clicked
         fakeSlide.style.transform  = `translateX(${-100 * (count)}%)`;
         slides.forEach(function(slide){
             slide.style.transform =  `translateX(${-100 * count}%)`
         })
-
+        
+        //For toggling play and pause buttons
         pause.classList.add('hide');
         play.classList.add('show');
+
         clearInterval(start);
         stop = false;
     })
@@ -129,10 +150,16 @@ function startInterval(){
             y.style.opacity = 0.25;
         }
         slides[count].style.opacity = 1;
+        
         slides.forEach(function(slide){
             fakeSlide.style.transform  = `translateX(${-100 * (count)}%)`;
             slide.style.transform =  `translateX(${-100 * count}%)`;
         })
+
+        for(z of btnRelCont){
+            z.classList.remove('show-btnrel-cont');
+        }
+        btnRelCont[count].classList.add('show-btnrel-cont');
        
         
     }, 5000);
