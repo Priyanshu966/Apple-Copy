@@ -23,7 +23,7 @@ btnToggle.forEach(function (e) {
     main.classList.toggle("hide");
     footer.classList.toggle("hide");
     header.classList.toggle("pos-rel");
-    for (let i = 1; i <= 6; i++) {
+    for (let i = 1; i <= 7; i++) {
       document.querySelector(`.sec${i}`).classList.toggle("hide");
     }
     xMark.classList.toggle("show");
