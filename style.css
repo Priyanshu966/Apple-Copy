@@ -722,11 +722,49 @@ h6 .fa-plus {
     display: block;
   }
 }
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 736px) {
   main {
     background: var(--clr-grey-1) url("images/macbook5-rotate.png") no-repeat;
     background-size: 300px;
     background-position: center bottom;
+    min-height: 500px;
+  }
+  .sec2 {
+    background: black url("images/line-iphones.png") no-repeat;
+    background-size: 233px;
+    background-position: center 173px;
+    height: 500px;
+  }
+  .sec1 {
+    height: 500px;
+  }
+  h1 {
+    padding-top: 40px;
+    font-size: 1.94rem;
+  }
+  h2 {
+    font-size: 1.9rem;
+    padding-top: 46px;
+  }
+  .ff-small {
+    margin-top: 0px;
+    font-size: 1.5rem;
+  }
+  .head-cent .apple {
+    font-size: 25px;
+  }
+  .head-cent .red {
+    font-size: 0.7rem;
+  }
+  h5 {
+    font-size: 1.25rem;
+  }
+  h3 {
+    font-size: 1.15rem;
+    margin-top: 4.5px;
+  }
+  .link-center {
+    margin: 8px auto 0px auto;
   }
   .sec6 {
     width: 284px;
@@ -779,5 +817,59 @@ h6 .fa-plus {
   }
   .show-btnrel-cont {
     height: 140px;
+  }
+  .sec3,
+  .sec4,
+  .sec5 {
+    height: fit-content;
+    grid-template-columns: auto;
+    margin: 0px;
+    padding: 0px;
+  }
+  .div-wrap {
+    background: var(--clr-grey-1);
+    margin: 12px 0px 0px 0px;
+    height: 500px;
+  }
+  .head-cent {
+    margin: 0px auto 0px auto;
+  }
+  .wrap-iphone {
+    background: var(--clr-grey-3) url("images/phones.png") no-repeat;
+    background-position: center 200px;
+    background-size: 345px;
+  }
+  .wrap-vision {
+    background: var(--clr-grey-3) url("images/vision.png") no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding-top: 320px;
+  }
+  .wrap-watch {
+    background: black url("images/watch2.png") no-repeat;
+    background-position: center bottom;
+    background-size: 330px;
+  }
+  .red {
+    color: var(--clr-red-1);
+    text-align: center;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    margin-top: 2.5px;
+  }
+  .wrap-laptop {
+    background: black url("images/laptop2.png") no-repeat;
+    background-position: center bottom;
+    background-size: 590px;
+  }
+  .wrap-phone {
+    background: var(--clr-grey-3) url("images/hand.png") no-repeat;
+    background-position: center 110px;
+    background-size: 100% 400px;
+  }
+  .wrap-tab {
+    background: var(--clr-grey-3) url("images/tab.png") no-repeat;
+    background-position: center 200px;
+    background-size: 440px;
   }
 }
